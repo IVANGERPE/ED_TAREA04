@@ -1,21 +1,40 @@
 package cuentas;
+
+/**
+ * 
+ * @author Ivan_G
+ * @version 1.0
+ * @since 06/03/2022
+ * 
+ */
 public class CCuenta {
-
-
+	
+/**
+ * Atributos clase Ccuenta
+ */
     private String nombre;
     private String cuenta;
     private double saldo;
-    private double tipoInterés;
-
+    private double tipoInteres;
+/**
+ * Constructor sin parámetros    
+ */
     public CCuenta()
     {
     }
-
+/**
+ * Constructor con parámetros:
+ * @param nom, nombre titular cuenta
+ * @param cue, número cuenta
+ * @param sal, saldo cuenta
+ * @param tipo, tipo de interés
+ */
     public CCuenta(String nom, String cue, double sal, double tipo)
     {
         setNombre(nom);
         setCuenta(cue);
         setSaldo(sal);
+        setTipoInteres(tipo);
     }
 
     public double estado()
@@ -39,6 +58,7 @@ public class CCuenta {
         setSaldo(getSaldo() - cantidad);
     }
 
+    
 	private String getNombre() {
 		return nombre;
 	}
@@ -64,10 +84,10 @@ public class CCuenta {
 	}
 
 	private double getTipoInterés() {
-		return tipoInterés;
+		return tipoInteres;
 	}
 
-	private void setTipoInterés(double tipoInterés) {
-		this.tipoInterés = tipoInterés;
+	private void setTipoInteres(double tipoInterés) {
+		this.tipoInteres = tipoInterés;
 	}
 }
